@@ -23,11 +23,9 @@ const router = createBrowserRouter([
       {
         path: "/product",
         element: <Products />,
+        loader: () => fetch("https://api.escuelajs.co/api/v1/products"),
       },
-      {
-        path: "/blog",
-        element: <Blogs />,
-      },
+      { path: "/blog", element: <Blogs /> },
       {
         path: "/about",
         element: <About />,
